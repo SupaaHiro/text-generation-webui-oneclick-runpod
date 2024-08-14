@@ -1,10 +1,10 @@
-# Runpod image for textgeneration-webui v1.13-1
+# Runpod image for textgeneration-webui v1.13-2
 
-An experimental runpod image for [text-generation-webui](https://github.com/oobabooga/text-generation-webui), inspired from **TheBlokeAI** [cuda11.8.0-ubuntu22.04-oneclick](ttps://github.com/TheBlokeAI/dockerLLM) container image.
+An experimental runpod image for [text-generation-webui](https://github.com/oobabooga/text-generation-webui), inspired from **TheBlokeAI** [dockerLLM](ttps://github.com/TheBlokeAI/dockerLLM) container image.
 
 #### To build the image:
 
-    docker buildx build -t text-generation-webui-oneclick-runpod:v1.13-1 .
+    docker buildx build -t text-generation-webui-oneclick-runpod:v1.13-2 .
 
 #### To run it locally:
 
@@ -15,7 +15,7 @@ An experimental runpod image for [text-generation-webui](https://github.com/ooba
     -e AUTH_USER=itmemario
     -e AUTH_PWD=password
     -e TRUST_REMOTE_CODE=n
-    text-generation-webui-oneclick-runpod:v1.13-1
+    text-generation-webui-oneclick-runpod:v1.13-2
 
 #### Environment Variables
 

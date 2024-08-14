@@ -5,6 +5,8 @@ ARG APTPKGS="wget curl vim git tmux tldr nvtop neovim rsync net-tools less iputi
 EXPOSE 7860
 EXPOSE 5000
 
+ENV CUDA_VERSION=12.1.1
+ENV PYTORCH_VERSION=2.2.2
 ENV DEBIAN_FRONTEND=noninteractive
 ENV GPU_CHOICE=A
 ENV USE_CUDA118=0
