@@ -25,11 +25,13 @@ RUN git config --global credential.helper store && \
 RUN wget -O miniconda-install.sh https://repo.anaconda.com/miniconda/Miniconda3-py39_24.5.0-0-Linux-x86_64.sh
 RUN chmod +x ./miniconda-install.sh && ./miniconda-install.sh -b -m && rm ./miniconda-install.sh
 
-WORKDIR /workspace
+WORKDIR /app
 
 RUN git clone https://github.com/oobabooga/text-generation-webui.git . && git checkout v1.13
 RUN chmod +x ./start_linux.sh && LAUNCH_AFTER_INSTALL=n ./start_linux.sh
 
 COPY scripts/start.sh .
+RUN chmod +x start.sh
 
-ENTRYPOINT ["sh", "-c", "./start.sh"]
+ENTRYPOINT ["sh", "-c"]
+CMD ["./start.sh"]
